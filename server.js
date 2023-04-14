@@ -1,12 +1,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require("body-parser");
-
+require('dotenv').config();
+const dbUrl = process.env.DB_URL;
 const app = express();
 
 const PORT = process.env.PORT || 3000;
 
-mongoose.connect('mongodb+srv://kakkarraunak:fVvFFCke246Cmv6q@cluster0.uf6r2mm.mongodb.net/?retryWrites=true&w=majority', {
+mongoose.connect(dbUrl, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {
