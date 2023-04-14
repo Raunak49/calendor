@@ -3,15 +3,14 @@ const app = express();
 const router = express.Router();
 const { google } = require('googleapis');
 const User = require('./models/users');
+require('dotenv').config();
 
 const OAuth2 = google.auth.OAuth2;
 
 const oauth2Client = new OAuth2(
     "998691270905-fctdoikdtrqp8mgcrruahopiljdfs64i.apps.googleusercontent.com",
     "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",
-    "http://localhost:3000/auth/google/callback",
-    "https://calendor.onrender.com/auth/google/callback",
-    "https://calendor-3a44scayv-raunak49.vercel.app/auth/google/callback"
+    process.env.REDIRECT_URI
 
 );
 
