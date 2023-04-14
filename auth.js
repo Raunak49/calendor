@@ -9,7 +9,10 @@ const OAuth2 = google.auth.OAuth2;
 const oauth2Client = new OAuth2(
     "998691270905-fctdoikdtrqp8mgcrruahopiljdfs64i.apps.googleusercontent.com",
     "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",
-    "http://localhost:3000/auth/google/callback"
+    "http://localhost:3000/auth/google/callback",
+    "https://calendor.onrender.com/auth/google/callback",
+    "https://calendor-3a44scayv-raunak49.vercel.app/auth/google/callback"
+
 );
 
 const scopes = ['https://www.googleapis.com/auth/calendar', 'profile', 'email'];
